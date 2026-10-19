@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김태헌 | 웹 명함</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="scene">
+    <div class="card" id="card">
+      <!-- 앞면 -->
+      <section class="face front">
+        <div class="avatar" id="avatar">
+          <svg viewBox="0 0 200 200" aria-label="김태헌 캐릭터">
+            <defs>
+              <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#6c5ce7" />
+                <stop offset="1" stop-color="#00cec9" />
+              </linearGradient>
+              <linearGradient id="hairGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2b2b3a" />
+                <stop offset="1" stop-color="#14141c" />
+              </linearGradient>
+              <linearGradient id="lensGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#2d3436" />
+                <stop offset=".55" stop-color="#4b3f9e" />
+                <stop offset="1" stop-color="#00a8a3" />
+              </linearGradient>
+              <clipPath id="circleClip"><circle cx="100" cy="100" r="96" /></clipPath>
+            </defs>
+
+            <!-- 배경 -->
+            <circle cx="100" cy="100" r="96" fill="url(#bgGrad)" />
+            <g clip-path="url(#circleClip)">
+              <!-- 반짝이 -->
+              <circle cx="40" cy="44" r="3" fill="#fff" opacity=".7" />
+              <circle cx="164" cy="56" r="2" fill="#fff" opacity=".6" />
+              <circle cx="172" cy="120" r="2.5" fill="#fff" opacity=".5" />
+
+              <!-- 목 -->
+              <path d="M84 138 L84 160 L116 160 L116 138 Z" fill="#e8b48f" />
+              <!-- 셔츠 -->
+              <path d="M70 160 L100 158 L130 160 L118 200 L82 200 Z" fill="#ffffff" />
+              <!-- 열린 칼라 -->
+              <path d="M84 152 L100 172 L90 180 L76 160 Z" fill="#f1f2f6" />
+              <path d="M116 152 L100 172 L110 180 L124 160 Z" fill="#f1f2f6" />
+              <!-- 블레이저 -->
+              <path d="M28 200 C32 172, 52 160, 78 156 L96 200 Z" fill="#1e1e2e" />
+              <path d="M172 200 C168 172, 148 160, 122 156 L104 200 Z" fill="#1e1e2e" />
+              <!-- 라펠 -->
+              <path d="M78 156 L92 196 L84 176 L70 170 Z" fill="#2c2c44" />
+              <path d="M122 156 L108 196 L116 176 L130 170 Z" fill="#2c2c44" />
+              <!-- 포켓스퀘어 -->
+              <path d="M138 178 L146 172 L150 180 Z" fill="#00cec9" />
+            </g>
+
+            <!-- 귀 -->
+            <ellipse cx="54" cy="104" rx="8" ry="11" fill="#e8b48f" />
+            <ellipse cx="146" cy="104" rx="8" ry="11" fill="#e8b48f" />
+            <!-- 얼굴 (각진 턱선) -->
+            <path d="M56 86 C56 60, 144 60, 144 86 L144 112 C144 132, 124 148, 100 148 C76 148, 56 132, 56 112 Z" fill="#f5c9a5" />
+            <!-- 그림자 턱선 -->
+            <path d="M64 124 C72 140, 86 146, 100 146 C114 146, 128 140, 136 124 C128 136, 114 142, 100 142 C86 142, 72 136, 64 124 Z" fill="#e3ad88" opacity=".6" />
+
+            <!-- 헤어 (투블럭 + 넘긴 머리) -->
+            <path d="M54 96 L54 78 C54 70, 58 66, 60 64 L62 96 Z" fill="#14141c" />
+            <path d="M146 96 L146 78 C146 70, 142 66, 140 64 L138 96 Z" fill="#14141c" />
+            <path d="M56 74 C50 40, 90 22, 122 28 C150 32, 160 52, 148 72 C140 62, 128 58, 112 58 C96 58, 82 62, 70 70 C64 74, 60 78, 56 80 Z" fill="url(#hairGrad)" />
+            <!-- 앞머리 볼륨 -->
+            <path d="M92 30 C120 18, 156 34, 150 62 C142 48, 126 42, 108 44 C100 40, 94 36, 92 30 Z" fill="#2f2f42" />
+            <path d="M104 34 C122 30, 140 40, 142 52" fill="none" stroke="#4a4a66" stroke-width="2" stroke-linecap="round" />
+
+            <!-- 눈썹 -->
+            <path d="M66 84 L92 80" stroke="#14141c" stroke-width="5" stroke-linecap="round" />
+            <path d="M108 80 L134 84" stroke="#14141c" stroke-width="5" stroke-linecap="round" />
+
+            <!-- 선글라스 -->
+            <path d="M62 90 L94 90 L92 106 C90 114, 68 114, 66 106 Z" fill="url(#lensGrad)" stroke="#111" stroke-width="2.5" stroke-linejoin="round" />
+            <path d="M106 90 L138 90 L134 106 C132 114, 110 114, 108 106 Z" fill="url(#lensGrad)" stroke="#111" stroke-width="2.5" stroke-linejoin="round" />
+            <path d="M94 93 L106 93" stroke="#111" stroke-width="3" />
+            <path d="M62 91 L55 94 M138 91 L145 94" stroke="#111" stroke-width="3" stroke-linecap="round" />
+            <!-- 렌즈 반사광 -->
+            <g class="glint">
+              <path d="M70 94 L78 94 L72 104 Z" fill="#fff" opacity=".55" />
+              <path d="M114 94 L122 94 L116 104 Z" fill="#fff" opacity=".55" />
+            </g>
+
+            <!-- 코 -->
+            <path d="M100 108 L97 120 L103 120" fill="none" stroke="#d39b78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <!-- 자신감 있는 미소 -->
+            <path class="mouth" d="M88 129 Q102 137 114 126" fill="none" stroke="#7a3e2b" stroke-width="3.5" stroke-linecap="round" />
+            <!-- 수염 그림자 -->
+            <path d="M80 132 C86 144, 114 144, 120 132" fill="none" stroke="#c99a7a" stroke-width="1.5" stroke-dasharray="1 3" opacity=".7" />
+          </svg>
+          <span class="bubble" id="bubble">안녕하세요! 😎</span>
+        </div>
+
+        <h1 class="name">김태헌</h1>
+        <p class="job">SideOnAI 대표</p>
+        <p class="intro"><span id="typing"></span><span class="cursor">|</span></p>
+
+        <ul class="contact">
+          <li>
+            <a href="mailto:th@sideonai.com">✉️ th@sideonai.com</a>
+            <button class="copy" data-copy="th@sideonai.com" aria-label="이메일 복사">복사</button>
+          </li>
+          <li>
+            <a href="tel:010-1111-2222">📞 010-1111-2222</a>
+            <button class="copy" data-copy="010-1111-2222" aria-label="전화번호 복사">복사</button>
+          </li>
+        </ul>
+
+        <div class="social">
+          <a class="social-btn linkedin-btn" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+          <a class="social-btn youtube-btn" href="https://www.youtube.com/@ai-study" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+            YouTube
+          </a>
+        </div>
+
+        <button class="flip-btn" id="flipBtn">뒷면 보기 ↻</button>
+      </section>
+
+      <!-- 뒷면 -->
+      <section class="face back">
+        <h2>&lt;SideOnAI /&gt;</h2>
+        <p class="back-sub">AI와 함께 놀고 있습니다. 같이 노실 분?</p>
+        <div class="tags">
+          <span>AI</span><span>Vibe Coding</span><span>Startup</span>
+          <span>Product</span><span>Play</span>
+        </div>
+        <pre class="code"><code>const taeheon = {
+  role: "CEO @ SideOnAI",
+  mood: "AI랑 노는 중 🎮",
+  mail: "th@sideonai.com",
+};</code></pre>
+        <button class="flip-btn" id="flipBackBtn">앞면 보기 ↻</button>
+      </section>
+    </div>
+  </main>
+
+  <div class="toast" id="toast">복사되었습니다!</div>
+  <script src="script.js"></script>
+</body>
+</html>
